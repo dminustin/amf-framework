@@ -1,15 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: danila
- * Date: 4/16/18
- * Time: 11:00 PM
- */
 
 namespace base;
 
 
-class exception_base
-{
+use Throwable;
 
+class exception_base extends \Exception
+{
+    function __construct($message = "", $code = 0, \Throwable $previous = null)
+    {
+        if (app()->config->debug) {
+            parent::__construct($message, $code, $previous);
+        } else {
+            //Silence is gold
+        }
+    }
 }

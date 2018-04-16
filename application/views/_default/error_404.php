@@ -1,7 +1,2 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: danila
- * Date: 4/16/18
- * Time: 10:46 PM
- */
+<img src="/amf-logo.png" align="left" hspace="16" vspace="0">
+<h1>404 Not Found</h1>

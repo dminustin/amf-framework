@@ -1,1 +1,5 @@
 application/config/local_config.php
+vendor
+composer.lock
+.idea
+.git

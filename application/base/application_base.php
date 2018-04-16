@@ -1,7 +1,9 @@
 <?php
+namespace base;
 
+use exceptions\fatal_exception;
 
-class application
+class application_base
 {
     /**
      * @var \config\default_config|null
@@ -20,13 +22,15 @@ class application
         } else {
             $this->config = new \config\default_config();
         }
+        $this->render = new render_base();
     }
 
     public function run() {
         $filename = APP_PATH . 'config' . DIRECTORY_SEPARATOR . 'routing.php';
         if (!file_exists($filename)) {
-
+            throw new fatal_exception('file application/config/routing.php not found');
         }
+        require($filename);
     }
 
     public function error403() {

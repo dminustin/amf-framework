@@ -1,7 +1,13 @@
 <?php
+
 /**
- * Created by PhpStorm.
- * User: danila
- * Date: 4/16/18
- * Time: 10:00 PM
+ * @return \application
  */
+function app() {
+    static $app = null;
+    if (is_null($app)) {
+        $name = APPLICATION_CLASS;
+        return $app = new $name();
+    }
+    return $app;
+}

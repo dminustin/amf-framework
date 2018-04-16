@@ -1,15 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: danila
- * Date: 4/16/18
- * Time: 11:01 PM
- */
-
 namespace exceptions;
 
 
-class fatal_exception
-{
+use base\exception_base;
+use Throwable;
 
+class fatal_exception extends exception_base
+{
+    function __construct($message = "", $code = 0, \Throwable $previous = null)
+    {
+        die((string)$message);
+    }
 }

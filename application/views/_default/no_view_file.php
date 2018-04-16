@@ -1,7 +1,5 @@
+<img src="/amf-logo.png" align="left" hspace="16" vspace="0">
+<h1>Blank page</h1>
+It seems that required View not found <br> <br>
 <?php
-/**
- * Created by PhpStorm.
- * User: danila
- * Date: 4/16/18
- * Time: 10:47 PM
- */
+echo $error_file; ?>
