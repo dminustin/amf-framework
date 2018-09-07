@@ -99,6 +99,16 @@ class local_config extends base_config {
 
 </pre>
 
+-- migrations
+
+application/migrations
+
+contains migration_XXXXXXX.php files (extends migration_template)
+method isExists must be override , it check for existing migration
+
+class name must equals to filename
+
+
 <h2>Usage</h2>
 - Run composer in the project's root directory
 <pre>composer install</pre>
