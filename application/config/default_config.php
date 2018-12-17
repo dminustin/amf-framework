@@ -19,4 +19,10 @@ class default_config
      * @var bool
      */
     var $debug = true;
+
+    /**
+     * use cache for twig
+     * @var bool
+     */
+    var $twig_cache = true;
 }
