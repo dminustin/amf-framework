@@ -1,10 +1,20 @@
 <?php
+/**
+ * Base migration class
+ */
 namespace migration;
 
 
+/**
+ * Class migration_template
+ * You must extend this in your migration files
+ *
+ * @package migration
+ */
 class migration_template
 {
     /**
+     * Upgrade
      * @return bool
      */
     function up() {
@@ -12,6 +22,7 @@ class migration_template
     }
 
     /**
+     * Downgrade
      * @return bool
      */
     function down() {
@@ -19,6 +30,7 @@ class migration_template
     }
 
     /**
+     * Returns true if migration already applied
      * @return bool
      */
     function isExists() {

@@ -11,4 +11,5 @@ spl_autoload_register(function($name) {
 
 chdir(__DIR__);
 define('APP_PATH', __DIR__ . DIRECTORY_SEPARATOR . 'application' . DIRECTORY_SEPARATOR);
+define('BASE_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 require('vendor/autoload.php');

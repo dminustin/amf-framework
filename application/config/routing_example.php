@@ -2,7 +2,7 @@
 
 /**
  * Routing Example
- * Rename this file to routing.php and edit
+ * Copy this file to routing.php and edit
  */
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {

@@ -1,9 +1,10 @@
 <?php
 
 /**
- * @return \application
+ * @return \base\application_base
  */
-function app() {
+function app()
+{
     static $app = null;
     if (is_null($app)) {
         $name = APPLICATION_CLASS;
