@@ -7,7 +7,7 @@
 
 $dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', function () {
-        app()->render->render('_default/welcome');
+        echo app()->render->render('_default/welcome');
     });
     // {id} must be a number (\d+)
     $r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');

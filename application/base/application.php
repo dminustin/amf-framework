@@ -19,10 +19,5 @@ class application extends application_base
     function __construct()
     {
         parent::__construct();
-
-
-        print_r($this->config);
-        die();
-
     }
 }

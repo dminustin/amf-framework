@@ -39,7 +39,13 @@ class application_base
     {
         //Load config file
         $this->loadConfig();
-        $this->render = new render_base();
+
+
+        $loader = new \Twig\Loader\FilesystemLoader(APP_PATH . "views");
+        $this->render = new \Twig\Environment($loader, [
+            'cache' => ($this->config['twig_cache']) ? BASE_PATH . "cache/twig" : false,
+        ]);
+
 
         if (!empty($this->config['db']['connection'])) {
             $this->db = new \PDO($this->config['db']['connection'], $this->config['db']['user'], $this->config['db']['pass']);

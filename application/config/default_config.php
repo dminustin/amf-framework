@@ -25,7 +25,7 @@ class default_config
      * use cache for twig
      * @var bool
      */
-    static $twig_cache = true;
+    static $twig_cache = false;
 
     static $db = [
         "connection" => "",
