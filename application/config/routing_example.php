@@ -5,8 +5,8 @@
  * Copy this file to routing.php and edit
  */
 
-$dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-    $r->addRoute('GET', '/', function(){
+$dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $r) {
+    $r->addRoute('GET', '/', function () {
         app()->render->render('_default/welcome');
     });
     // {id} must be a number (\d+)

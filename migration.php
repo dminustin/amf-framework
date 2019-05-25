@@ -1,12 +1,12 @@
 <?php
 $type = array_pop($_SERVER['argv']);
-if (!in_array($type,['up','down'])) {
+if (!in_array($type, ['up', 'down'])) {
     echo "\n\nUsage php migration.php up|down\n\n";
     die();
 }
 
 
-require_once(__DIR__. DIRECTORY_SEPARATOR . 'loader.php');
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'loader.php');
 $migrations = glob('./application/migration/*.php');
 
 foreach ($migrations as $migration) {
@@ -30,7 +30,6 @@ foreach ($migrations as $migration) {
 
         echo "\n";
     }
-
 
 
 }

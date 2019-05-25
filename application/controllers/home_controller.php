@@ -2,6 +2,7 @@
 /**
  * Base class for home page
  */
+
 namespace controllers;
 
 

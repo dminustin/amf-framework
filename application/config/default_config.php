@@ -4,6 +4,7 @@
  * do not edit
  * use local_config.php instead
  */
+
 namespace config;
 
 /**
@@ -18,11 +19,33 @@ class default_config
      * Set to true if you want to debug
      * @var bool
      */
-    var $debug = true;
+    static $debug = true;
 
     /**
      * use cache for twig
      * @var bool
      */
-    var $twig_cache = true;
+    static $twig_cache = true;
+
+    static $db = [
+        "connection" => "",
+        "user" => "",
+        "pass" => ""
+    ];
+
+
+    /**
+     * Call this funciton to get all config data
+     * @return array
+     */
+    function getData()
+    {
+        $result = [];
+        foreach (get_class_vars(get_called_class()) as $k => $v) {
+            $result[$k] = $v;
+        }
+        return $result;
+    }
+
+
 }

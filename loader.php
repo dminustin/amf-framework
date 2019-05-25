@@ -1,6 +1,6 @@
 <?php
 
-spl_autoload_register(function($name) {
+spl_autoload_register(function ($name) {
     $filepath = APP_PATH . str_replace('\\', DIRECTORY_SEPARATOR, $name) . '.php';
     if (!file_exists($filepath)) {
         return false;

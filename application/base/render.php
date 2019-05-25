@@ -35,7 +35,7 @@ class render extends render_base
      * Render the template
      * @param       $view
      * @param array $vars
-     * @param bool  $return_http_code
+     * @param bool $return_http_code
      *
      * @throws \Twig_Error_Loader
      * @throws \Twig_Error_Runtime

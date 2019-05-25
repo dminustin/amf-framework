@@ -44,12 +44,23 @@ class render_base
         $this->vars[$name] = $value;
     }
 
+    /**
+     * Render error page
+     * Error page
+     * @param int $error error code
+     * @return void
+     */
+    function errorPage($error)
+    {
+        header('HTTP/1.0 ' . $error);
+        $this->render('_default/error_page', ['error' => $error]);
+    }
 
     /**
      * Render the template
      *
      * @param          $view
-     * @param array    $vars
+     * @param array $vars
      * @param bool|int $return_http_code
      */
     function render($view, $vars = [], $return_http_code = false)
@@ -66,19 +77,6 @@ class render_base
         }
         extract($vars);
         require($filename);
-    }
-
-
-    /**
-     * Render error page
-     * Error page
-     * @param int $error error code
-     * @return void
-     */
-    function errorPage($error)
-    {
-        header('HTTP/1.0 ' . $error);
-        $this->render('_default/error_page', ['error' => $error]);
     }
 
 

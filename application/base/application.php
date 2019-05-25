@@ -18,12 +18,11 @@ class application extends application_base
      */
     function __construct()
     {
-        //Load config file
-        if (file_exists(APP_PATH . 'config' . DIRECTORY_SEPARATOR . 'local_config.php')) {
-            $this->config = new \config\local_config();
-        } else {
-            $this->config = new \config\default_config();
-        }
-        $this->render = new render();
+        parent::__construct();
+
+
+        print_r($this->config);
+        die();
+
     }
 }

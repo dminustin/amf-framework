@@ -2,6 +2,7 @@
 /**
  * Base migration class
  */
+
 namespace migration;
 
 
@@ -17,7 +18,8 @@ class migration_template
      * Upgrade
      * @return bool
      */
-    function up() {
+    function up()
+    {
         return true;
     }
 
@@ -25,7 +27,8 @@ class migration_template
      * Downgrade
      * @return bool
      */
-    function down() {
+    function down()
+    {
         return true;
     }
 
@@ -33,7 +36,8 @@ class migration_template
      * Returns true if migration already applied
      * @return bool
      */
-    function isExists() {
+    function isExists()
+    {
         return false;
     }
 
