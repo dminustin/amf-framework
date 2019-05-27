@@ -4,3 +4,5 @@ composer.lock
 .idea
 .git
 docs
+public/css/.sass-cache
+cache

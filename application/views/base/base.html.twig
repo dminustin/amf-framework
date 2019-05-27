@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    {% include "base/header.html.twig" %}
+    {% include "base/topmenu.html.twig" %}
+</head>
+<body>
+<div id="main">
+    {% block body %}{% endblock %}
+</div>
+{% include "base/footer.html.twig" %}
+</body>
+</html>
+
+
