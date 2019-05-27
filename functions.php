@@ -12,3 +12,10 @@ function app()
     }
     return $app;
 }
+
+function pre_print($data)
+{
+    echo '<pre>';
+    print_r($data);
+    die();
+}
